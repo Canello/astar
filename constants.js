@@ -5,15 +5,17 @@ export const NODE_STATE = {
     start: 3,
     destination: 4,
     path: 5,
+    open: 6,
 };
 
 export const NODE_COLOR = {
     [NODE_STATE.empty]: "white",
     [NODE_STATE.blocked]: "black",
     [NODE_STATE.visited]: "blue",
-    [NODE_STATE.start]: "red",
+    [NODE_STATE.start]: "orange",
     [NODE_STATE.destination]: "green",
     [NODE_STATE.path]: "pink",
+    [NODE_STATE.open]: "red",
 };
 
 export const CANVAS_SIZE = {

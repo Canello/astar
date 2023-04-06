@@ -1,16 +1,22 @@
-import { NODE_COLOR, NODE_SIZE } from "./constants.js";
+import { CANVAS_SIZE, NODE_COLOR, NODE_SIZE } from "./constants.js";
 
 export class Drawer {
     constructor(grid) {
         this._grid = grid;
         this._canvas = document.querySelector("canvas");
+        this._canvas.width = CANVAS_SIZE.width;
+        this._canvas.height = CANVAS_SIZE.height;
         this._context = this._canvas.getContext("2d");
-        this.draw();
     }
 
     draw() {
+        this._clear;
         this._drawNodes();
         this._drawGrid();
+    }
+
+    _clear() {
+        this._context.clearRect(0, 0, this._canvas.width, this._canvas.height);
     }
 
     _drawNodes() {
